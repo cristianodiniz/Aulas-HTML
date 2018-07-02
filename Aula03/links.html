@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="br-pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Links - HTML 5</title>
+</head>
+
+    <body>
+
+        <h2>Usando Hyperlinks em HTML</h2>
+
+        <p>Hyperlinks são uteis par criar viculos com outras páginas.</p>
+
+        <h3>
+            HTML Links - Syntax
+        </h3>
+        <p>
+            Em HTML, links são definidos pela tag
+            <code>&lt;a&gt;</code>:
+            <br>
+
+            <code>&lt;a href="url"&gt;link text&lt;/a&gt;
+        </p>
+        <p> Pose de usar links para acessar um site em outro dominio</p>
+        <a href="https://www.google.com">Google</a>
+    
+        <p> Pose de usar links para acessar um página interna</p>
+        <a href="./pagina2.html">página 2</a>
+
+        <h3>HTML Links - Target Attribute</h3>
+
+        <p>
+            Podesse tambem atraves de links configurar qual será o modo de abertura do link,
+            para isso basta setar ao atributo <strong>target</strong> com um dos valores abaixo:
+        </p>    
+        <ul>
+            <li>_blank - Opens the linked document in a new window or tab</li>
+            <li>_self - Opens the linked document in the same window/tab as it was clicked (this is default)</li>
+            <li>_parent - Opens the linked document in the parent frame</li>
+            <li>_top - Opens the linked document in the full body of the window</li>
+            <li>framename - Opens the linked document in a named frame</li>
+        </ul>
+
+        <p>
+            <a href="./pagina2.html" target="_blank"> página 2 em nova página</a>
+        </p>
+
+        <p>
+            <a href="./pagina2.html" target="_self"> página 2 na mesma pagina</a>
+        </p>
+
+        <h3>HTML Links - Title Attribute</h3>
+        <p>
+                O atributo <strong>title</strong> sever para dar uma dica do clique que sera clicado    
+        </p>    
+        <p>
+            <a href="./pagina2.html" target="_self" title="Ao clicar nesse link voce irá para pagina 2"> página 2</a>
+        </p>
+
+        <h3>HTML Links - Create a Bookmark</h3>
+        <p>
+                HTML bookmarks are used to allow readers to jump to specific parts of a Web page.
+
+                Bookmarks can be useful if your webpage is very long.
+                
+                To make a bookmark, you must first create the bookmark, and then add a link to it.
+                
+                When the link is clicked, the page will scroll to the location with the bookmark.
+        </p>  
+
+        <p>
+            
+        Example<br>
+        First, create a bookmark with the id attribute:<br>
+
+        &lt;h2 id="C4"&gt;Chapter 4&lt;h2&gt;<br><br>
+        Then, add a link to the bookmark ("Jump to Chapter 4"), from within the same page:<br>
+
+        &lt;a href="#C4"&gt;Jump to Chapter 4&lt;/a&gt; <br><br>
+        
+
+        Or, add a link to the bookmark ("Jump to Chapter 4"), from another page: <br>
+
+        &lt;a href="html_demo.html#C4"&gt;Jump to Chapter 4&lt;/a&gt;
+
+         </p>
+    </body>
+</html>
