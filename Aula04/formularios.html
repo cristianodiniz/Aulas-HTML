@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML - Formularios</title>
+</head>
+<body>
+    
+    <h2>Usando fomularios</h2>
+
+    <p>
+        Para usar um fomulario em html usa-se a tag form. Que é uma
+        tag container de inputs, input é uma tag que recebe valor do 
+        usuário.
+    </p>
+
+    <form action="./recebeForm.html" method="GET">
+        <label for="nome">Nome</label> <br>
+        <input id="nome" name="nome" type="text">
+        <br>
+        <label for="cidade">Cidade</label> <br>
+        <input  id="cidade" name="cidade"  type="text">
+        <br>
+
+        <input type="radio" name="sexo" value="M" checked> Masculino <br>
+        <input type="radio" name="sexo" value="F"> Feminino <br>
+
+        <br>
+        <br>
+
+        <input type="checkbox" name="jogo1" value="mario"> Mario <br>
+        <input type="checkbox" name="jogo2" value="fear"> Fear <br>
+        <input type="checkbox" name="jogo3" value="f1"> F1 <br>
+
+        <input type="submit" value="Enviar">
+
+    </form>
+
+</body>
+</html>
