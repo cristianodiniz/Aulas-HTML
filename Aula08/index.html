@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Layout - float and clear</title>
+    <meta http-equiv="refresh" content="1">
+    <style>
+        div>div {
+            background-color: aquamarine;
+            padding: 12px 30px 12px 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS Layout - float and clears</h1>
+
+    <p>A propriedade Float do CSS especifica como um elemento deve flutuar. </p>
+
+    <ul>
+        <li>
+            <a href="./examples/ex.1.html">Exemplo 1 - Direita e Esquerda</a>
+        </li>
+    </ul>
+
+
+    <h2>A propriedade float pode ter um dos seguintes valores</h2>
+
+    <ul>
+        <li>left - O elemento flutuará para a esquerda do seu elemento container;</li>
+        <li>right - O elemento flutuará para a direita do seu elemento container;</li>
+        <li>none - O elemento nao flutuará, será renderizado conforme o contexto do mesmo. Este é o valor default;</li>
+        <li>inherit - O elemento inherit flutuará conforme o elemento pai.</li>
+    </ul>
+
+    <p>Em sua aplicação simples a propriedade float pode ser usada para quebra o texto em torno de uma imagem.</p>
+
+    <ul>
+        <li>
+            <a href="./examples/ex.2.html">Exemplo 2 - float: right;</a>
+        </li>
+        <li>
+            <a href="./examples/ex.3.html">Exemplo 3 - float: left;</a>
+        </li>
+        <li>
+            <a href="./examples/ex.4.html">Exemplo 4 - float: none;</a>
+        </li>
+    </ul>
+
+
+    <h1>The clear Property</h1>
+
+    <p>A propriedade Clean do CSS especifica como um elemento não deve flutuar. </p>
+
+    <h2>A propriedade clean pode ter um dos seguintes valores</h2>
+
+    <ul>
+        <li>none - Permite flutuar para os dois lados. Este é default</li>
+        <li>left - Nao permite flutuar para a esquerda</li>
+        <li>right- Nao permite flutuar para a direita</li>
+        <li>both - Nao permite flutuar para a para os dois lados</li>
+        <li>inherit - Herda do elemento pai o atributo clear</li>
+    </ul>
+    <p>O uso mais comum dessa propriedade é depois de usar o float em um elemento.</p>
+
+    <p>
+        Quanto devo usar o clear? Pode se usar o clear para limpar o float, como por exemplo, quando existe um elemento flutuando
+        a esquerda, e logo abaixo existe outro elemento. Sem o clear o segundo elemento sera renderizado na mesma posição
+        do elemento que esta flutuando. Sendo assim use o clear:left para o sengundo elemento, para que o mesmo seja renderizado
+        abaixo do primeiro.
+    </p>
+
+    <ul>
+        <li>
+            <a href="./examples/ex.5.html">Exemplo 5 - sem clear</a>
+        </li>
+        <li>
+            <a href="./examples/ex.6.html">Exemplo 6 - com clear</a>
+        </li>
+    </ul>
+
+
+    <h1>The Clearfix Hack</h1>
+
+    <p>Quando o elemento pai é menor que o elemento filho, sendo que o filho tem a propriedade float setada, veremos que o elemento
+        filho ficará fora do elemnto pai.</p>
+
+    <p>Para isso podemos usar a propriedade overflow:auto para corrigir esse problema, essa abordagem é chamada de "Clearfix
+        Hack".
+    </p>
+    <ul>
+        <li>
+            <a href="./examples/ex.7.html">Exemplo 7 - sem clearfix</a>
+        </li>
+        <li>
+            <a href="./examples/ex.8.html">Exemplo 8 - com clearfix</a>
+        </li>
+    </ul>
+
+    <p>Cabe comentar que o overflow:auto nao resolve todos os casos, sendo que a abordagem melhor para isso é usar pseudo-element.</p>
+
+    <ul>
+        <li>
+            <a href="./examples/ex.9.html">Exemplo 9 - clearfix usando pseudo-element</a>
+        </li>
+    </ul>
+
+
+    <h1>Grid of Boxes / Como o mesmo Width</h1>
+
+    <p>Usando o float para adicionar elementos lado a lado.</p>
+
+    <ul>
+        <li>
+            <a href="./examples/ex.10.html">Exemplo 10 - Grid of Boxes</a>
+        </li>
+        <li>
+            <a href="./examples/ex.11.html">Exemplo 11 - Imagem lado a lado - width</a>
+        </li>
+        <li>
+            <a href="./examples/ex.12.html">Exemplo 12 - Imagem lado a lado - height</a>
+        </li>
+    </ul>
+
+
+    <h1>Aplicão do float</h1>
+
+    <ul>
+        <li>
+            <a href="./examples/ex.13.html">Navigation Menu com float</a>
+        </li>
+        <li>
+            <a href="./examples/ex.14.html">Exemplo 11 - Imagem lado a lado - width</a>
+        </li>
+        
+    </ul>
+
+
+</body>
+
+</html>
