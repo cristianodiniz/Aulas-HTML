@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Layout - Propriedade position</title>
+</head>
+
+<body>
+
+    <h1>CSS Layout - Propriedade position</h1>
+
+
+    <p>
+        A propriedade position o metodo de posicionamento que o elemneto terá.
+    </p>
+
+    <p>A propriedade pode ter os seguintes valores</p>
+    <ul>
+        <li>static</li>
+        <li>relative</li>
+        <li>fixed</li>
+        <li>absolute</li>
+        <li>sticky</li>
+    </ul>
+
+    <p>Para posicionar o elemento usa-se as propriedades a seguir</p>
+    <ul>
+        <li>top</li>
+        <li>bottom</li>
+        <li>left</li>
+        <li>right</li>
+    </ul>
+    <p>
+        Essas propriedade somente funciona quando usado combinado a propriedade position respondida diferente de static
+    </p>
+
+    <h2>position: static</h2>
+
+    <p>A reposta defaul dos elementos html, e quando statico nao tem efeito top, botton e left e right. Nesse caso os elementos
+        são posicionados conforme a fluxo da pagina normal.</p>
+
+    <ul>
+        <li><a href="./exemplos/ex.1.html">Exemplo 1 - position: static</a></li>
+    </ul>
+
+    <h2>position: relative;</h2>
+
+    <p> Um elemento com posição: relative; está posicionado com relacao a sua posicao normal. </p>
+
+    <ul>
+        <li><a href="./exemplos/ex.2.html">Exemplo 2 - position: relative</a></li>
+    </ul>
+
+    <h2>position: fixed;</h2>
+
+    <p> Um elemento com posição: fixed; está posicionado com relacao a viewport, isso significa que ele sempre ficará visivel
+        em algum lugar da tela, mesmo que a pagina seja rolada. </p>
+
+    <ul>
+        <li><a href="./exemplos/ex.3.html">Exemplo 3 - position: fixed</a></li>
+    </ul>
+
+
+    <h2>position: absolute;</h2>
+
+    <p> Um elemento com posição: absolute; está posicionado com relacao ao elemento pai mais proximo, podendo ser ajustado
+        usando as propriedades top, botton e left e right. </p>
+
+    <ul>
+        <li><a href="./exemplos/ex.4.html">Exemplo 4 - position: absolute</a></li>
+    </ul>
+
+    <h2>position: sticky;</h2>
+
+    <p> Um elemento com posição: sticky; é posicionado com base na posição de rolagem do usuário. </p>
+
+    <ul>
+        <li><a href="./exemplos/ex.5.html">Exemplo 5 - position: sticky</a></li>
+    </ul>
+
+
+    <h1>Sobreposição de Elementos z-index</h1>
+
+    <p>Quando o elemento esta posicionado, o mesmo pode sobrepor outros elementos</p>
+
+    <p>Para contolar este caso usa-se a propriedade z-index para especificar a ordem da pilha de vizualização. Ou seja se
+        o elemento ficara sobre, atras ou no mesmo contexto que os demais.</p>
+
+    <ul>
+        <li><a href="./exemplos/ex.6.html">Exemplo 6 - z-index</a></li>
+        <li><a href="./exemplos/ex.7.html">Exemplo 7 - z-index</a></li>
+    </ul>
+
+    <p><strong>Nota:</strong> Se dois elementos posicionados se sobrepuserem sem um índice z especificado, o elemento posicionado por último no código HTML será mostrado na parte superior.</p>
+</body>
+
+</html>
