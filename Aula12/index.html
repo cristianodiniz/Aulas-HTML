@@ -5,31 +5,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>CSS Styles </title>
+    <title>CSS Styles</title>
 </head>
 
-<body>
-    <h1>Colors</h1>
+<body >
+
+    <h1>Cores</h1>
 
     <p>As cores podem ser especificadas por:</p>
 
-
     <ul>
-        <li>Nome - <span style="color: tomato">Tomato</span></li>
-        <li>RGB - Composicao das cores primarias Red, Green e Blue - <span style="color: rgb(60,255,100)">RGB(60,70,100)</span></li>
-        <li>HEX - Composicao das cores primarias Red, Green e Blue em hexadecimal - <span style="color: #6010DD">#607010</span></li>
-        <li>HSL - Composicao de tonalidade, saturacao e brilho - hsl(hue, saturation, lightness) - <span style="color: hsl(180, 50%, 50%)">hsl(60,
-                50%, 50%)</span></li>
-        <li>RGBA - RGB com alppha rgba(red, green, blue, alpha) - hsl(hue, saturation, lightness) - <span style="color: rgba(255, 79, 60,0.5)">rgba(255,
-                79, 60,0.5)</span></li>
-        <li>HSLA - HSL com alpha hsla(hue, saturation, lightness, alpha) - <span style="color: hsla(60, 50%, 50%,0.5)">hsla(60,
-                50%, 50%,0.5)</span></li>
+        <li>
+            Nome -
+            <span style="color: tomato">Tomate</span>
+        </li>
+        <li>
+            RGB - Composicao das cores primarias RED GREEN e BLUE -
+            <span style="color:rgb(0,255,0)">
+                rgb(255,0,0)
+            </span>
+        </li>
+        <li>
+            HEX - Composicao das cores primarias RED GREEN e BLUE so que em hexadecimal
+            <span style="color:#00FF00">
+                #00FF00
+            </span>
+        </li>
+        <li>
+            RGBA - RGB com alpha
+            <span style="color:rgba(150, 100, 0, 0.6)">
+                rgba(255, 0, 0, 0.5)
+            </span>
+        </li>
+
+        <li>
+            HSL - Compoiscao é definida pela tonalidade saturacao e brilho
+            <span style="color:hsl(180, 10%, 50%)">hsl(60, 10%, 50%)</span>
+        </li>
+
+        <li>
+            HLSA - HSL com a adicao do alpha
+            <span style="color:hsla(180,100%,50%, 0.5)">
+                hsla(180,100%,50%, 0.5)
+            </span>
+        </li>
+
     </ul>
 
+    <h1>Propriedade outline</h1>
 
-    <h1>Propriedade Outline</h1>
+    <p>É uma borda da borda</p>
 
-    <p>Basicamente aceita é o border so que é o nivel acima da bordar</p>
+    <ul>
+        <li>outline-color</li>
+        <li>outline-style</li>
+        <li>outline-width</li>
+        <li>outline-offset</li>
+        <li>outline</li>
+    </ul>
+
+    <p>Exemplo</p>
 
     <ul>
         <li>
@@ -37,43 +72,165 @@
             outline-style: solid;
             outline-color: red;
             outline-width: 4px;
-            outline-offset: 4px;">A 4px thick outline.
+            outline-offset: 4px;
+            ">A teste A</p>
+        </li>
+
+        <li>
+            <p style="
+            border: 1px solid black;
+            outline: aqua solid 8px;
+            outline-offset: 4px;">
+                B teste B
             </p>
+
         </li>
     </ul>
 
-    <h1>Icon CSS</h1>
+    <h1>Propriedade background</h1>
 
-    <p>Uma forma simples de adicionar icones em um aplicacao html é usando bibliotecas como Font Awesome.</p>
+    <ul>
+        <li>background-color
 
-    <h2>Add biblioteca</h2>
-    <p>adicione o link para https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css</p>
+            <p style="background-color: royalblue">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos aspernatur cupiditate dolorum mollitia ad aperiam
+                eveniet, expedita quisquam atque consectetur aliquam explicabo ipsa, laudantium dolorem veniam doloribus
+                deserunt, placeat non.</p>
 
-    <h3>Font Awesome</h3>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <i class="fa fa-cloud"></i>
-    <i class="fa fa-heart"></i>
-    <i class="fa fa-car"></i>
-    <i class="fa fa-file"></i>
-    <i class="fa fa-bars"></i>
+        </li>
+        <li>background-image
 
-    <h3>Bootstrap</h3>
+            <p style="
+            background-image:url(https://img3.stockfresh.com/files/r/rastudio/m/92/7873260_stock-vector-owl-sketch-icon.jpg);
+                background-repeat:no-repeat; 
+                background-position: right top; 
+                background-attachment: fixed;
+                ">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam esse in sit laboriosam exercitationem modi distinctio labore velit cumque repellendus, deserunt nisi. Explicabo illum blanditiis at totam minima consectetur neque.
+                Quasi, autem iste, voluptates vitae consequuntur temporibus impedit eius laudantium ut enim quae fuga cum pariatur sunt, numquam doloribus? Laudantium excepturi fugiat impedit, repellat dolores perferendis odit repudiandae ut atque?
+                Dicta est deleniti magni eius dolores itaque iste natus quisquam perspiciatis, repellendus culpa, laborum molestias? Earum quaerat sit ratione quas ipsam, tempora expedita ab. Laborum commodi esse impedit quasi quia!
+                Nemo labore doloribus officiis voluptates ipsum perferendis libero placeat laboriosam at atque cum, quisquam architecto maxime amet molestiae quis rem? Officiis sit expedita ea. Veritatis facilis tenetur magni est iusto?
+                Repudiandae tempora quisquam beatae numquam placeat nihil qui distinctio, sint harum officiis eaque dolor assumenda laborum nulla voluptas et, consequatur fuga magni accusamus enim recusandae! Minus maxime eius laudantium ipsum!
+                Blanditiis, nobis veniam. Neque placeat fugiat ducimus aut porro eos sed non quam accusamus dolorem illo magnam omnis, cum, amet esse blanditiis! Quo est laboriosam quibusdam molestiae itaque blanditiis dolorum?
+                Minima velit natus corrupti, deleniti, cum assumenda ipsam libero temporibus alias dolores dolor officiis! Minus, consequatur quae. Consequatur mollitia possimus ex maiores, reprehenderit nihil nesciunt totam eveniet quod magni minima.
+                Ipsam veritatis iusto asperiores labore quas ut cupiditate sit eum accusamus incidunt possimus pariatur odio magnam est obcaecati, dolorum deserunt minus cumque ipsum. Voluptate eaque laboriosam fugiat, necessitatibus harum optio!
+                     </p>
+
+
+        </li>
+    </ul>
+
+    <h2>Propriedade Opacity</h2>
+
+    <p>Opacity server para setar a transparencia de 
+        um elemento.
+    </p>
+
+    <img style="width: 350px;opacity:0.2;" src="https://i.ytimg.com/vi/FSEyIkvIdI0/maxresdefault.jpg" alt="" srcset="">
+    <br>
+    <span>Opacity:0.2</span>
+    <br>
+    <img style="width: 350px;opacity:0.5;" src="https://i.ytimg.com/vi/FSEyIkvIdI0/maxresdefault.jpg" alt="" srcset="">
+    <br>
+    <span>Opacity:0.5</span>
+    <br>
+    <img style="width: 350px;opacity:1;" src="https://i.ytimg.com/vi/FSEyIkvIdI0/maxresdefault.jpg" alt="" srcset="">
+    <br>
+    <span>Opacity:1</span>
+
+
+    <div style="background-color: salmon;">
+        <p style="background-color: black;
+        color: white;
+        padding: 8px;
+        width: 75%;
+        margin: 10%;
+        opacity: 0.5;
+        display: -webkit-inline-box;
+        ">Teste opacidade na div</p>
+    </div>
+
+
+    <h1>Icones - Font awesome</h1>
+
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+    <i class="fa fa-home"></i>
+
+    <span style="color:red;font-size:35px;" class="fa fa-car"></span>
+
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+    <h1>Icones - material</h1>
+
+    <i class="material-icons">cloud</i>
+
+    <button 
+    class="fa fa-home">Home</button>
+
+    <h1>Icones - bootstrap</h1>
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-    <i class="glyphicon glyphicon-cloud"></i>
-    <i class="glyphicon glyphicon-remove"></i>
-    <i class="glyphicon glyphicon-user"></i>
-    <i class="glyphicon glyphicon-envelope"></i>
-    <i class="glyphicon glyphicon-thumbs-up"></i>
+    <i class="glyphicon glyphicon-search"></i>
 
-    <h3>Material Icons</h3>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <i class="material-icons">cloud</i>
-    <i class="material-icons">favorite</i>
-    <i class="material-icons">attachment</i>
-    <i class="material-icons">computer</i>
-    <i class="material-icons">traffic</i>
+
+
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 
 
 
