@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript - Basico</title>
+
+    <style>
+        p {
+            padding: 8px 36px;
+            background-color: rgb(7, 140, 255);
+            display: inline-block;
+            border: 1px solid black;
+            border-radius: 8px;
+            text-align: center;
+            width: 200px;
+        }
+    </style>
+
+</head>
+
+<body onload="carrega()">
+    <script>
+        function carrega() {
+            var jogadores = document.querySelectorAll("p");
+            jogadores[0].addEventListener('click'
+                , alterarNome1
+            )
+            jogadores[1].addEventListener('click'
+                , alterarNome2
+            )
+            function alterarNome1(elemento) {
+                var novoNome = prompt("Informe o jogador:");
+                jogadores[0].textContent = "Jogador 1 :" + novoNome;
+            }
+            function alterarNome2(elemento) {
+                var novoNome = prompt("Informe o jogador:");
+                jogadores[1].textContent = "Jogador 2:" + novoNome;
+            }
+        }
+    </script>
+
+    <p>Jogador 1: João</p>
+    <br>
+    <p>Jogador 2: Pedro</p>
+
+
+</body>
+
+</html>
