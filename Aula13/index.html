@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Styles</title>
+
+    <style>
+        
+        a:link{
+            text-decoration: none;
+            color: #00FF00;
+        }
+
+        a:visited{
+            color: #00FF00;
+        }
+
+        a:hover{
+            color: #00FF;
+        }
+
+        a:active{
+            color: #FFFF55;
+        }
+        
+        span::after{
+            content: "teste";
+            color: #FFFF55;
+            font-size: 15px;
+        }
+
+        div::first-letter{
+            color: #000000;
+            font-size: 50px;
+        }
+
+        input[value="virus"]::after{
+            content: "aqui não william";
+        
+        }
+        
+        div[ativo="true"]::after{
+            content: "CRIANDO PSEUDO ELEMENTO";
+        }
+        
+    </style>
+</head>
+<body>
+
+    <h1>CSS Style</h1>
+    <ul>
+        <li>Pseudo-Classes</li>
+        <li>Pseudo- Elements</li>
+    </ul>
+
+    <a href="#teste">Exemplo pseudo-classes</a>
+    <br>
+    <br>
+   
+    <span>
+        Exemplo pseudo-elements - usando after ou before
+    </span>
+<br>
+<br>
+    <div>
+        Exemplo pseudo-elements - first-letter 
+    </div>
+
+
+    <br>
+    <br>
+    <input type="text"  value="virus">
+    <br>
+    <input type="text" william="virus" value="bicibleta">
+
+    <br>
+    <br>
+
+    <div ativo="true">
+        Teste
+    </div>
+    
+    
+</body>
+</html>

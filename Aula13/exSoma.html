@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Soma</title>
+</head>
+<body onload="carregar()">
+    
+    <label for="num1">Numero 1</label>
+    <br>
+    <input type="text" name="num1" id="num1">
+    <br>
+    <label for="num2">Numero 2</label>
+    <br>
+    <input type="text" name="num2" id="num2">
+    <br>
+    <button>Calcular</button>
+    <div>
+        Resultado é :
+    </div>
+
+    <script>
+        function carregar(){
+
+            document.querySelector("button").addEventListener(
+                "click"
+                ,somar
+            )
+        }
+
+        function somar(){
+            var numero1 = document.querySelector("#num1").value;
+            var numero2 = document.querySelector("#num2").value;
+            
+            var calculo = Number(numero1) + Number(numero2);
+
+            document.querySelector("div").textContent =
+             "Resultado é :"+calculo;
+
+
+        }
+
+    </script>
+
+</body>
+</html>
