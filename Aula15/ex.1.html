@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulas Geometricas Planas</title>
+</head>
+<body onload="Carregar()">
+    <h1>Formulas Geometricas Planas</h1>
+    <ul>
+        <li> <button id="triangulo">Calcular Base Triangulo</button> </li>
+        <li> <button id="retangulo">Calcular Base Retangulo</button> </li>
+    </ul>
+    <div>
+        <p>Resultado é:</p>
+        <span id="Resultado">O trinangulo B = 5 e A=10 Area= X</span>
+    </div>
+
+    <script>
+        
+        function Carregar(){
+
+            var btnTri = document.querySelector("#triangulo");
+            var btnRet = document.querySelector("#retangulo");
+
+            btnTri.addEventListener("click",CalcTriangulo)
+            btnRet.addEventListener("click",CalcRetangulo)
+            
+            
+        }
+
+        function CalcTriangulo(){
+            
+            var resultado = document.querySelector("#Resultado");
+
+            var b = prompt("base:");
+            var a = prompt("altura:");
+
+            var calc = (b*a)/2;
+            resultado.textContent = "O trinangulo B = "+b+" e A="+a+" Area = "+calc;
+
+        }
+
+        function CalcRetangulo(){
+            
+            var resultado = document.querySelector("#Resultado");
+
+            var b = prompt("base:");
+            var a = prompt("altura:");
+
+            var calc = (b*a);
+
+            resultado.textContent = "O retangulo B = "+b+" e A="+a+" Area = "+calc;
+
+        }
+
+        
+
+    </script>
+
+
+</body>
+</html>
