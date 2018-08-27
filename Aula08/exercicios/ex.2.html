@@ -1,19 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta http-equiv="refresh" content="1">
+    <meta http-equiv="refresh" content="100">
     <title>Exercicio 1 - Formulario Enviar e Cancelar</title>
 
     <style>
-        form {
-             margin: 4px;
-            border: 1px solid gray;
-            padding: 8px;
-            float: left;
+        .container-itens-form{
+            background-color: silver;
         }
 
         #descricao, #observacao {
@@ -42,11 +38,11 @@
             display: table;
         }
 
-       
-     
         .box {
-            float: left;
+            margin: 4px;
+            border: 1px solid gray;
             padding: 8px;
+            float: left;
         }
     </style>
 
@@ -55,7 +51,7 @@
 <body>
 
     <h2>Cadastro de Itens</h2>
-    <div class="container-itens-form">
+    <div class="container-itens-form .clearfix">
 
         <form id="form 1" class="box" action="get">
             <div>
