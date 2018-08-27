@@ -11,6 +11,126 @@
 <body>
     <h1>JavaScript Aula 16</h1>
 
+    <li>
+
+        String metodos
+        <ul>
+            <li>length
+                <script>
+
+                    var texto = "Isso é uma string"
+
+                    texto.length
+                    //-> 17 
+                </script>
+            </li>
+            <li>indexOf
+                <script>
+                    var texto = "Isso é uma string"
+                    texto.indexOf("é")
+                    //-> 5 
+                </script>
+
+
+            </li>
+            <li>substr
+                <script>
+                    var texto = "Isso é uma string"
+                    texto.indexOf("é")
+                    //-> 5 
+
+                    var texto = "Cristiano Diniz Pinto"
+                    var espelhado = ""
+                    for (var x = texto.length; x > 0; x--) {
+                        espelhado += texto.substr(x - 1, 1).toLowerCase()
+                    }
+                    console.log(espelhado)
+
+                </script>
+
+
+
+            </li>
+            <li>
+                toUpperCase e toLowerCase
+                <script>
+                    var texto = "Isso é uma string"
+                    texto.toLowerCase()
+                    texto.toUpperCase()
+
+                </script>
+
+            </li>
+
+            <li>replace
+                <script>
+                    var texto = "Cristiano 1 2"
+                    texto.replace("1", "Diniz").replace("2", "Pinto")
+                    //Cristiano Diniz Pinto
+                </script>
+
+            </li>
+
+            <li>split
+                <script>
+                    var texto = "Cristiano Diniz Pinto"
+                    var array = texto.split(" ") 
+                    var aux = "";
+                    for (var x=0;x < array.length; x++){
+                        aux = array[x] +" "+ aux;
+                    }
+                    console.log(aux);
+                    
+                </script>
+
+            </li>
+        </ul>
+
+        <script>
+            
+            //declaração de array 
+            var meuArray = []
+
+            //add valor no array no final do array
+            meuArray.push(10)
+
+            //arrays em javascript nao são tipados
+            meuArray.push("texto")
+
+            //arrays em javascript nao são tipados
+            meuArray[5] = "texto"
+            
+            //para remover um valor pode usar o pop, remove o ultimo
+            meuArray.pop()
+
+
+        </script>
+
+    </li>
+
+    <li>Objetos
+
+        <script>
+        
+            var obj = {};
+            obj.nome = "Cristiano"
+            obj.telefone = "54 9 9556 0001"
+            obj.idade = 30
+
+
+            var obj = {
+                nome: "Cristiano",
+                telefone:"54 9 9556 0001",
+                idade:30
+            }
+
+
+        </script>
+    </li>
+
+
+
+
     <ul>
         <li>querySelector</li>
         <li>querySelectorAll</li>
