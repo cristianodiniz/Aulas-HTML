@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Catch me</title>
+
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            padding-top: 30px;
+            text-align: center;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body onload="carregando()">
+
+    <div>
+        Catch me
+    </div>
+
+
+    <script>
+        var lista = ["Nao foi dessa vez","Quem sabe na proxima","errroooo!!!!",
+        "mas que burro da zero para ele","Mizeriave aqui não","Nem a palll juvenal "]
+
+        function carregando() {
+            var quadrado = document.querySelector("div")
+
+            quadrado.addEventListener("mouseover",
+                novaPosicao
+            )
+        }
+
+        function novaPosicao(e){
+            var quadrado = document.querySelector("div")
+            quadrado.style.top = parseInt(Math.random() * 500)+"px"
+            quadrado.style.left = parseInt(Math.random() * 500)+"px"
+            quadrado.textContent = lista[parseInt(Math.random()*5)]
+            
+        }
+    </script>
+</body>
+
+</html>
