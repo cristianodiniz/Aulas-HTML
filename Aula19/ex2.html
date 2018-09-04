@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercicio 2 - Tempo</title>
+</head>
+
+<body onload="carregar()">
+    <h1>Exercicio 2</h1>
+    <p>
+        Faça um programa em javascript que receba do usuário o dia, mes e ano que ele nasceu, e com base na data e hora corrente,
+        calcule a sua idade em: décadas, anos, meses, semanas, dias e horas.
+    </p>
+
+    <div>
+        <label for="nascimento">Nascimento</label>
+        <br>
+        <input type="date" id="nascimento">
+
+        <div>
+            <div>
+                <label for="">Decadas:</label>
+                <span id="decadas"></span>
+            </div>
+
+            <div>
+                <label for="">Anos:</label>
+                <span id="anos"></span>
+            </div>
+
+            <div>
+                <label for="">Meses:</label>
+                <span id="meses"></span>
+            </div>
+
+            <div>
+                <label for="">Semanas:</label>
+                <span id="semanas"></span>
+            </div>
+
+
+            <div>
+                <label for="">Dias:</label>
+                <span id="dias"></span>
+            </div>
+
+            <div>
+                <label for="">Horas:</label>
+                <span id="horas"></span>
+            </div>
+
+            <div>
+                <label for="">Minutos:</label>
+                <span id="minutos"></span>
+            </div>
+
+            <div>
+                <label for="">Segundos:</label>
+                <span id="segundos"></span>
+            </div>
+
+            <div>
+                <label for="">Milisegundos:</label>
+                <span id="milisegundos"></span>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <script>
+
+        function carregar() {
+
+            //var nasc = document.querySelector("#nascimento")
+            //nasc.addEventListener("change", cacularIdade)
+
+            setInterval(cacularIdade,1);
+
+        }
+
+        const segundo = 1000;
+        const minuto = segundo * 60;
+        const hora = minuto * 60;
+        const dia = hora * 24;
+        const semana = dia * 7;
+        const mes = dia * 30;
+        const anos = mes * 12;
+        const decadas = anos * 10;
+
+        function cacularIdade() {
+
+            var nasc = document.querySelector("#nascimento")
+
+            var dtNasc = strToDate(nasc.value)
+            var dtAtual = new Date()
+
+            var idadeMilisegundos = dtAtual.getTime() -
+                dtNasc.getTime()
+
+            var idadeSegundos = Math.floor(idadeMilisegundos / segundo)
+            var idadeMinutos = Math.floor(idadeMilisegundos / minuto)
+            var idadeHoras = Math.floor(idadeMilisegundos / hora)
+            var idadeDias = Math.floor(idadeMilisegundos / dia)
+            var idadeSemanas = Math.floor(idadeMilisegundos / semana)
+            var idadeMeses = Math.floor(idadeMilisegundos / mes)
+            var idadeAnos = Math.floor(idadeMilisegundos / anos)
+            var idadeDecadas = Math.floor(idadeMilisegundos / decadas)
+
+            setValor("decadas", idadeDecadas)
+            setValor("anos", idadeAnos)
+            setValor("meses", idadeMeses)
+            setValor("semanas", idadeSemanas)
+            setValor("dias", idadeDias)
+            setValor("horas", idadeHoras)
+            setValor("minutos", idadeMinutos)
+            setValor("segundos", idadeSegundos)
+            setValor("milisegundos", idadeMilisegundos)
+
+        }
+
+        function setValor(idElemento, valor) {
+            document.querySelector("#" + idElemento).textContent = valor
+        }
+
+        function strToDate(str) {
+
+            var array = str.split("-")
+
+            var ano = Number(array[0])
+            var mes = Number(array[1]) - 1
+            var dia = Number(array[2])
+
+            var data = new Date(ano, mes, dia)
+
+            return data
+
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>
