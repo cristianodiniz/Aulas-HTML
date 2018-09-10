@@ -36,17 +36,32 @@
     </style>
 
     <script>
-        const contato = {
+        const Modelo = {
             nome:null,
             sexo:null,
             fone:null,
         }
         
-        var listaContatos = []
+        var listaContatos = [{
+            nome:"Bruno",
+            sexo:"M",
+            fone:"54 6565 8756",
+        },{
+            nome:"Debora",
+            sexo:"F",
+            fone:"54 6565 5854",
+        },{
+            nome:"Raquel",
+            sexo:"F",
+            fone:"51 6524 6687",
+        }]
 
         function carregando(){
+            
             var button = document.querySelector("button")
             button.addEventListener("click",salvar)
+
+            carregarValorGrid()
         }
 
         function salvar(){
@@ -58,6 +73,7 @@
         }
 
         function carregarValorGrid(){
+
 
         }
     </script>
