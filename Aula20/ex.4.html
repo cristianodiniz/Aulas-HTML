@@ -37,48 +37,99 @@
 
     <script>
         const Modelo = {
-            nome:null,
-            sexo:null,
-            fone:null,
+            nome: null,
+            sexo: null,
+            fone: null,
         }
-        
+
         var listaContatos = [{
-            nome:"Bruno",
-            sexo:"M",
-            fone:"54 6565 8756",
-        },{
-            nome:"Debora",
-            sexo:"F",
-            fone:"54 6565 5854",
-        },{
-            nome:"Raquel",
-            sexo:"F",
-            fone:"51 6524 6687",
+            nome: "Bruno",
+            sexo: "M",
+            fone: "54 6565 8756",
+        }, {
+            nome: "Debora",
+            sexo: "F",
+            fone: "54 6565 5854",
+        }, {
+            nome: "Raquel",
+            sexo: "F",
+            fone: "51 6524 6687",
         }]
 
-        function carregando(){
-            
+        function carregando() {
+
             var button = document.querySelector("button")
-            button.addEventListener("click",salvar)
+            button.addEventListener("click", adicionar)
 
             carregarValorGrid()
         }
 
-        function salvar(){
+        function adicionar() {
+            var nome = document.querySelector("#nome")
+            var sexo = document.querySelector("#sexo:checked")
+            var fone = document.querySelector("#fone")
 
-        }
-
-        function addNaLista(){
+            if (nome.value === "")
+                alert("Informe o nome!")
+            if (fone.value === "")
+                alert("Informe o telefone!")
+            if (sexo ===null)
+                alert("Informe o sexo!")
             
+            var novoContato = Object.assign({}, Modelo);
+            novoContato.nome = nome.value.toUpperCase();
+            novoContato.sexo = sexo.value;
+            novoContato.fone = fone.value;
+            
+            salvar(novoContato)
+              nome.value = ""
+              sexo.checked = false
+              fone.value =""
+
+            carregarValorGrid()
         }
 
-        function carregarValorGrid(){
+        function salvar(Contato) {
 
+            for (x = 0; x < listaContatos.length; x++){
+
+                let nome = listaContatos[x].nome.toUpperCase()
+                if (nome === Contato.nome.toUpperCase()){
+                    alert("Esse nome já está na lista!!");
+                    return
+                }
+
+            }
+
+            listaContatos.push(Contato);
 
         }
+
+
+
+        function carregarValorGrid() {
+            var addlista = document.querySelector("tbody")
+
+            addlista.innerHTML = "";
+
+            for (var x = 0; x < listaContatos.length; x++) {
+
+                addlista.innerHTML += "<tr>" +
+                    "<td>" + listaContatos[x].nome + "</td>" +
+                    "<td>" + listaContatos[x].sexo + "</td>" +
+                    "<td>" + listaContatos[x].fone + "</td>" +
+                    "<td><button>Apagar</button></td>" +
+                    "</tr>";
+
+            };
+        }
+        
+
+
+
     </script>
 
-    
+
 
 </head>
 
@@ -103,8 +154,8 @@
         <div class="cl-left cl-edit">
             <label for="sexo">Sexo</label>
             <br>
-            <input type="radio" id="sexo" value="m"> M
-            <input type="radio" id="sexo" value="f"> F
+            <input type="radio" id="sexo" name="gender" value="M"/> M
+            <input type="radio" id="sexo" name="gender" value="F"/> F
         </div>
 
     </div>
@@ -135,6 +186,10 @@
                     <th>
                         Fone
                     </th>
+
+                    <th>
+                        
+                    </th>
                 </tr>
 
             </thead>
@@ -146,6 +201,7 @@
                     <td>M</td>
                     <td>54 65502 55654</td>
                 </tr>
+
 
 
             </tbody>
