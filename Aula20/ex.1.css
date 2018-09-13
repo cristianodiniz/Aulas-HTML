@@ -1,0 +1,45 @@
+.cl-left {
+    float: left;
+}
+
+.cl-edit {
+    margin: 8px
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+th,
+td {
+    border: 1px solid;
+
+}
+
+th{
+    background-color: cornflowerblue;
+}
+
+table {
+    border-spacing: unset;
+    width: 100%;
+}
+
+
+.col-nome{
+    width: 50%;
+}
+
+.col-sexo{
+    width: 10%;
+}
+
+.col-fone{
+    width: 30%;
+}
+
+.col-acoes{
+    width: 10%;
+}
