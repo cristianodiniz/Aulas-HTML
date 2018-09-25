@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Teste Acesso Remoto</title>
+</head>
+
+<body >
+
+    <img style="width: 100%;" src="./img1.jpg" alt="">
+
+    <h2>Acessar os Sites dos colegas</h2>
+
+
+    <ul>
+        <li>
+            <a href="http://172.20.28.147:8080">Professor</a>
+        </li>
+        <li>
+            <a href="http://172.20.28.151:8080">Deyvinson</a>
+        </li>
+        <li>
+            <a href="http://172.20.28.145:8080">Natã</a>
+        </li>
+        <li>
+            <a href="http://172.20.28.168:8080">Brivaldo</a>
+        </li>
+        <li>
+            <a href="http://172.20.28.146:8080">William</a>
+        </li>
+        <li>
+            <a href="http://172.20.28.141:8080">Vagner</a>
+        </li>
+        <li>
+            <a href="http://172.20.28.167:8080">Douglas</a>
+        </li>
+        <li>
+            <a href="http://172.20.28.166:8080">Victor</a>
+        </li>
+    </ul>
+
+    <h2>Configuracao</h2>
+
+    <h4>Para fazer o testes execute os passos a seguir</h4>
+    <ul>
+        <li>Instalar o node js -
+            <a href="https://linuxize.com/post/how-to-install-node-js-on-ubuntu-18.04/">Passo-a-passo</a>
+        </li>
+        <li>Instalar o http-server executando o comando no terminal</li>
+        <li> sudo npm install http-server -g </li>
+
+        <h4>Caso de problema de versao execute os comandos</h4>
+        <li>sudo npm cache clean -f </li>
+        <li>sudo npm install -g n</li>
+        <li>sudo n stable</li>
+
+        <h4>Agora é so executar o comando http-server na pasta que deseja colocar online</h4>
+
+        <li>Libera a porta 8080</li>
+        <li>sudo iptables -I INPUT -s 0/0 -d 0/0 -p tcp --dport 8080 -j ACCEPT
+        </li>
+
+
+
+    </ul>
+</body>
+
+</html>

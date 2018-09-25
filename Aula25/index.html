@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Canvas</title>
+</head>
+<body onload="carregarEventos()">
+    
+    <h1>Canvas</h1>
+
+    <canvas id="canvas1" height="500px" width="800px"
+        style="border: 1px solid black"
+    >
+
+    </canvas>
+
+
+    <script>
+
+        function carregarEventos(){
+            var canvas = document.querySelector("#canvas1")
+            canvas.addEventListener("click",figura2)
+
+           // setInterval(()=>{figura2()},100);
+        }
+
+        function desenhaQuadrado(x,y){
+            var canvas = document.querySelector("#canvas1");
+            var contexto = canvas.getContext("2d");
+            contexto.fillStyle="green";
+            contexto.fillRect(x,y,100,80);
+        }
+        
+        function desenhaCirculo(x,y,r){
+            var canvas = document.querySelector("#canvas1");
+            var contexto = canvas.getContext("2d");
+            contexto.beginPath();
+            contexto.arc(x,y,r,0,2*Math.PI);
+            contexto.fillStyle="blue";
+            contexto.fill();
+            //contexto.arc(80,80,70,0, 1 * Math.PI);
+            contexto.stroke();
+            
+        }
+
+        function limparCanvas(){
+            var canvas = document.querySelector("#canvas1");
+            var contexto = canvas.getContext("2d"); 
+            contexto.clearRect(0,0,canvas.width ,canvas.height,false )
+        }
+
+        function figura1(){
+            desenhaQuadrado(10,10)
+            desenhaQuadrado(10,50)
+            desenhaQuadrado(10,60)
+            desenhaQuadrado(10,80)
+            desenhaQuadrado(10,90)
+            desenhaQuadrado(50,50)
+
+            
+        }
+        
+        var x = 10
+        var y = 10
+        var r = 2;
+        function figura2(){
+
+            x += 10
+            y += 10
+            r += 1
+
+            desenhaQuadrado(x,y)
+            desenhaCirculo(x-20,y-20,r)
+        }
+
+
+        
+
+    </script>
+</body>
+</html>
