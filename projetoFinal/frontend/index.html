@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jogo da Velha</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
+
+    <style>
+        .container {}
+
+        .row {}
+
+        .col {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            margin: -2px;
+            text-align: center;
+        }
+
+        .border1 {
+            border-bottom: solid 1px black;
+            border-right: solid 1px black;
+        }
+
+        .border2 {
+            border-right: solid 1px black;
+        }
+
+        .border3 {
+            border-bottom: solid 1px black;
+        }
+
+        .elemento {
+            display: inline-block;
+            margin-top: 35%;
+        }
+    </style>
+    <script src="./index.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col border1 val0">
+                <i class="fa fa-circle elemento"></i>
+            </div>
+            <div class="col border1 val1">
+                <i class="fa fa-circle elemento"></i>
+            </div>
+            <div class="col border3 val2">
+                <i class="fa fa-circle elemento"></i>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col border1 val3">
+                <i class="fa fa-circle elemento"></i>
+            </div>
+            <div class="col border1 val4">
+                <i class="fa fa-circle elemento"></i>
+            </div>
+            <div class="col border3 val5">
+                <i class="fa fa-circle elemento"></i>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col border2 val6">
+                <i class="fa fa-times elemento "></i>
+            </div>
+            <div class="col border2 val7">
+                <i class="fa fa-times elemento"></i>
+            </div>
+            <div class="col val8">
+                <i class="fa fa-times elemento"></i>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
